@@ -21,10 +21,10 @@
 - `Departure Delay in Minutes`: 출발 지연 시간 (분)
 - `Arrival Delay in Minutes`: 도착 지연 시간 (분)
 
-**서비스 평가 (1-5점 척도)**:
+**서비스 평가 (0-5점 척도)**:
+> "0은 결측치로 볼지 점수로 볼지 생각해볼 필요 있음"
 - `Inflight wifi service`: 기내 Wi-Fi 서비스
 - `Departure/Arrival time convenient`: 출발/도착 시간 편리성
-    - 해당 컬럼은 0~5점 척도이니 전처리 필요
 - `Ease of Online booking`: 온라인 예약 편의성
 - `Gate location`: 탑승구 위치 편리성
 - `Food and drink`: 기내 음식 및 음료
