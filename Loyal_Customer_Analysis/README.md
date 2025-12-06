@@ -90,9 +90,30 @@
 
 ### 2. 서비스 점수의 ‘0점’을 결측치(NaN)으로 처리
 
-- 0점은 "서비스를 이용하지 않았다"는 의미
-  → 이용하지 않은 경우는 평가에서 제외해야 상관계수 왜곡이 없음
-  → 모든 서비스 컬럼에서 0을 NaN으로 변경
+#### 0점 비율이 서비스 별로 크게 차이남
+
+| Service                | 0 Ratio (%) |
+| ---------------------- | ----------- |
+| Ease of Online booking | 4.32%       |
+| Inflight wifi service  | 2.99%       |
+| Online boarding        | 2.34%       |
+| Leg room service       | 0.45%       |
+| Cleanliness            | 0.01%       |
+| Seat comfort           | 0%          |
+| Baggage handling       | 0%          |
+| Checkin service        | 0%          |
+
+**✔ 0점이 많이 나오는 항목 = 선택적 서비스**
+예: Online booking, Wi-Fi, Online boarding
+→ 승객들이 이 서비스를 '안 쓸 수도' 있는 항목
+
+**✔ 0점이 거의 없는 항목 = 누구나 겪는 기본 서비스**
+예: 좌석(seat comfort), 기내 청결(cleanliness), 승무원 서비스
+
+즉, 0점이 특정 서비스에서만 집중적으로 발생하는 것은 "미이용"이 아니라면 절대 나올 수 없는 패턴이다.
+
+➡ 설문자가 “기내 Wi-Fi를 이용하지 않았다 → 0점”
+➡ “좌석을 사용하지 않았다”는 말이 말이 안 됨 → 0점이 거의 없음
 
 ### 3. 기본 만족도 비교
 
